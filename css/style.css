@@ -4,10 +4,12 @@
     padding: 0;
     overflow-x: hidden;
 }
+/*Kod för index.html*/
 #grid_wrapper{
     display: grid;
     grid-template-columns: 5fr 2fr;
-    grid-template-rows: 80px 100px 150px 300px 300px 80px;
+    background: linear-gradient(#DBAD6A, rgb(163, 98, 28));
+    grid-template-rows: 80px 150px 150px 350px 350px 500px;
     grid-template-areas: 
     "he he"
     "s1 s1"
@@ -19,7 +21,7 @@
 
 header{
     grid-area: he;
-    background-color: rgb(219, 173, 106);
+    background-color: #DFD5A5 ;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,7 +29,8 @@ header{
 
 h1{
     width: 300px;
-    background-color: rgb(98, 131, 149);
+    font-size: 1.7rem;
+    background-color: #96897B;
     border-radius: 20px;
     display: flex;
     justify-content: center;
@@ -44,6 +47,11 @@ nav{
     justify-content: center;
     align-items: center;
     border-radius: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
 }
 
 #link_list{
@@ -89,7 +97,7 @@ nav{
 
 #section_1{
     grid-area: s1;
-    background: linear-gradient(180deg, rgb(219, 173, 106), rgb(207, 153, 95));
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -99,20 +107,22 @@ nav{
 }
 
 #slogan_row2{
+    margin-top: 20px;
     margin-left: 30px;
+
 }
 
 #section_2{
     grid-area: s2;
     display: flex;
-    background: linear-gradient(180deg, rgb(207, 153, 95), rgb(193, 128, 58));
+    
 
     justify-content: center;
     align-items: center;
 }
 
 #search_bar{
-    width: 600px;
+    width: 300px;
     height: 40px;
     font-size: 1.5rem;
     border: 3px solid black;
@@ -123,34 +133,223 @@ nav{
 
 #article_1{
     grid-area: a1;
-    background: linear-gradient(180deg, rgb(193, 128, 58), rgb(163, 98, 28));
+    
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
 #cookingpic1{
-    height: 280px;
+    height: 180px;
+    border-radius: 20px;
+    border: 4px solid black;
+    margin-right: 10px;
 }
 
-#cookingtext1{
+.cookingtext{
     width: 400px;
     font-size: 1.2rem;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 #article_2{
     grid-area: a2;
-    background-color: rgb(163, 98, 28);
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#gronsaker{
+    height: 180px;
+    width: auto;
+    border-radius: 20px;
+    border: 4px solid black;
+    margin-left: 10px;
+    margin-bottom: 20px;
 }
 
 footer{
     grid-area: fo;
-    background-color: rgb(158, 110, 202);
+    background-color: #DFD5A5 ;
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 1fr 5fr;
+    grid-template-areas: 
+    "ti"
+    "fc";
 }
+
+#footer_container {  
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    grid-area: fc;
+}
+
+.city_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+}
+
+#footer_title{
+    grid-area: ti;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*kod för mat.html*/
+
+#food_wrapper{
+    width: 100vw;
+    padding-bottom: 40px;
+    background: linear-gradient(#DBAD6A, rgb(163, 98, 28));
+}
+
+.foods{
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 350px;
+}
+
+.food_img{
+    margin-top: 30px;
+    border-radius: 10px;
+    border: black dotted 1.5px;
+}
+
+.lagg_i_korg{
+    margin-top: 10px;
+    background: green;
+    width: 250px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 19%;
+}
+
+#biggermac{
+    width: 350px;
+}
+
+#enchiladas{
+    width: 320px;
+}
+
+#falafel{
+    width: 300px;
+}
+
+#friedchicken{
+    width: 350px;
+}
+
+#goulash{
+    width: 280px;
+}
+
+#pulledpork{
+    width: 350px;
+}
+
 
 @media screen and (min-width: 700px) {
 
+    #grid_wrapper{
+        display: grid;
+        grid-template-columns: 5fr 2fr;
+        grid-template-rows: 80px 100px 100px 300px 300px 500px;
+        grid-template-areas: 
+        "he he"
+        "s1 s1"
+        "s2 s2"
+        "a1 a1"
+        "a2 a2"
+        "fo fo";
+    }
+
+    h1{
+        width: 300px;
+        background-color: #96897B;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        font-size: 2rem;
+    }
+
+    #slogan_row2{
+        margin-left: 30px;
     
+    }
+
+    #search_bar{
+        width: 600px;
+        height: 40px;
+        font-size: 1.5rem;
+        border: 3px solid black;
+        background-color: rgb(223, 213, 165);
+        outline: none;
+       
+    }
+
+    .cookingtext{
+        width: 400px;
+        font-size: 1.2rem;
+    }
+
+    #cookingpic1{
+        height: 280px;
+        border-radius: 20px;
+        border: 4px solid black;
+    }
+
+    #gronsaker{
+        height: 280px;
+        width: auto;
+        border-radius: 20px;
+        border: 4px solid black;
+        margin-left: 10px;
+        margin-bottom: 20px;
+    }
+
+    #food_wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: end;
+    }
+
+    .foods{
+        border: solid black;
+        margin: 10px;
+        padding-bottom: 10px;
+    }
+
+    #falafel{
+        height: 300px;
+        width: auto;
+    }
     
-    
+    #meatstew{
+        height: 300px;
+    }
+
+    #biggermac{
+        width: 300px;
+    }
+
+    #friedchicken{
+        width: 300px;
+    }
+
+    #tortellini{
+        height: 350px;
+    }
 }
