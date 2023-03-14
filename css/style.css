@@ -34,6 +34,7 @@ h1{
     border-radius: 20px;
     display: flex;
     justify-content: center;
+    padding: 5px;
 }
 
 h2{
@@ -91,8 +92,8 @@ a{
 }
 
 #logo{
-    height: 80px;
-    width: 80px;
+    height: 70px;
+    width: 70px;
 }
 
 #section_1{
@@ -223,18 +224,6 @@ footer{
     border: black dotted 1.5px;
 }
 
-.lagg_i_korg{
-    margin-top: 10px;
-    background: green;
-    width: 250px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    left: 19%;
-}
-
 #biggermac{
     width: 350px;
 }
@@ -258,6 +247,46 @@ footer{
 #pulledpork{
     width: 350px;
 }
+
+/*Kod för varukorgsicon funktion*/
+.lagg_i_korg{
+    margin-top: 10px;
+    background: green;
+    width: 250px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 19%;
+    cursor: pointer;
+}
+
+#lagg_i_korg:hover{
+
+}
+
+
+#indicator_circle{
+    display: flex;
+    height: 20px;
+    width: 20px;
+    background-color: red;
+    position: relative;
+    z-index: 1;
+    top: 20px;
+    left: 7px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#indicator_text{
+    color: white;
+    font-weight: 2px;
+}
+
 
 
 @media screen and (min-width: 700px) {
