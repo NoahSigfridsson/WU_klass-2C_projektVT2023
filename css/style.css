@@ -20,11 +20,13 @@
 }
 
 header{
+    width: 100%;
     grid-area: he;
     background-color: #DFD5A5 ;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 
 h1{
@@ -110,6 +112,7 @@ a{
 #slogan_row2{
     margin-top: 20px;
     margin-left: 30px;
+    margin-right: 40px;
 
 }
 
@@ -262,11 +265,6 @@ footer{
     cursor: pointer;
 }
 
-#lagg_i_korg:hover{
-
-}
-
-
 #indicator_circle{
     display: flex;
     height: 20px;
@@ -279,7 +277,10 @@ footer{
     border-radius: 50%;
     justify-content: center;
     align-items: center;
+}
 
+.toggle_indicator{
+    opacity: 0;
 }
 
 #indicator_text{
@@ -287,7 +288,61 @@ footer{
     font-weight: 2px;
 }
 
+/*Kod för varukorg.html*/
 
+#basket_wrapper{
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 80px 80px 100px 200px minmax(80px, 1fr) 80px;
+    grid-template-columns: 50% 10px 50%;
+    grid-template-areas: 
+    "he he he"
+    "vs1 vli va1"
+    "vba vli va2"
+    "vba vli va3"
+    "vba vli ved"
+    "vfo vli ved"
+    ;
+}
+#vsection_1{
+    background-color: red;
+    grid-area: vs1;
+}
+
+#basket{
+    background-color: aqua;
+    grid-area: vba;
+}
+
+#varticle_1{
+    background-color: blue;
+    grid-area: va1;
+}
+
+#varticle_2{
+    background-color: pink;
+    grid-area: va2;
+}
+
+#varticle_3{
+    background-color: brown;
+    grid-area: va3;
+}
+
+#vfooter{
+    background-color: tomato;
+    grid-area: vfo;
+}
+
+#empty_div{
+    background-color: green;
+    grid-area: ved;
+}
+
+#vline{
+    background-color: black;
+    grid-area: vli;
+}
 
 @media screen and (min-width: 700px) {
 
@@ -348,6 +403,15 @@ footer{
         margin-bottom: 20px;
     }
 
+
+    header{
+    
+        grid-area: he;
+        background-color: #DFD5A5 ;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
     #food_wrapper{
         display: flex;
         flex-wrap: wrap;
