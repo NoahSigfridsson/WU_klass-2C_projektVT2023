@@ -292,21 +292,21 @@ footer{
 
 #basket_wrapper{
     display: grid;
+    height: 100vh;
     background: linear-gradient(#DBAD6A, rgb(163, 98, 28));
-    grid-template-rows: 80px 80px 80px 200px 100px 80px;
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 80px 80px 100px 200px minmax(80px, 1fr) 80px;
+    grid-template-columns: 1.4fr 1fr;
     grid-template-areas: 
     "he he"
     "vs1 va1"
     "vba va2"
     "vba va3"
     "vba ved"
-    "vfo ved"
-    ;
+    "vfo ved";
 }
+
 #vsection_1{
     display: flex;
-    background-color: red;
     grid-area: vs1;
     justify-content: center;
     align-items: center;
@@ -314,7 +314,8 @@ footer{
 
 .varticle_style{
     border-left: 10PX black solid;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid black;
+
 }
 
 #varukorg_status{
@@ -331,15 +332,50 @@ footer{
 }
 
 #varticle_1{
-    background-color: blue;
     grid-area: va1;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
     
 }
 
+#building_icon{
+    height: 50px;
+    width: auto;
+    border: solid black;
+    border-radius: 10px;
+}
+
 #varticle_2{
-    background-color: pink;
     grid-area: va2;
+    padding: 10px;
     
+}
+#rabatt_titel{
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 2rem;
+}
+#rabattkupong_img{
+    height: 25px;
+    width: auto;
+    transform: rotate(-45deg);
+    margin-right: 15px;
+    
+}
+#kampanjkod_bar{
+    width: 210px;
+}
+
+#kampanjkod_button{
+    height: 25px;
+    width: 70px;
+    border-radius: 10px;
+    border: none;
 }
 
 #varticle_3{
