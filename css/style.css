@@ -285,28 +285,37 @@ footer{
 
 #indicator_text{
     color: white;
-    font-weight: 2px;
+    font-weight: 500;
 }
 
 /*Kod för varukorg.html*/
 
 #basket_wrapper{
     display: grid;
-    height: 100vh;
-    grid-template-rows: 80px 80px 100px 200px minmax(80px, 1fr) 80px;
-    grid-template-columns: 50% 10px 50%;
+    grid-template-rows: 80px 80px 5px 80px 5px 200px 5px 100px 80px;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 
     "he he he"
     "vs1 vli va1"
+    "vdi vli vdi"
     "vba vli va2"
+    "vba vli vdi"
     "vba vli va3"
+    "vba vli vdi"
     "vba vli ved"
     "vfo vli ved"
     ;
 }
 #vsection_1{
+
     background-color: red;
     grid-area: vs1;
+}
+
+#varukorg_status{
+    background-color: #96897B;
+    padding: 5px;
+    border-radius: 10px;
 }
 
 #basket{
@@ -342,6 +351,11 @@ footer{
 #vline{
     background-color: black;
     grid-area: vli;
+}
+
+#vdivider{
+    background-color: gray;
+    grid-area: vdi;
 }
 
 @media screen and (min-width: 700px) {
