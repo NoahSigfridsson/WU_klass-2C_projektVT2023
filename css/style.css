@@ -292,30 +292,37 @@ footer{
 
 #basket_wrapper{
     display: grid;
-    grid-template-rows: 80px 80px 5px 80px 5px 200px 5px 100px 80px;
-    grid-template-columns: 1fr 1fr 1fr;
+    background: linear-gradient(#DBAD6A, rgb(163, 98, 28));
+    grid-template-rows: 80px 80px 80px 200px 100px 80px;
+    grid-template-columns: 1.5fr 1fr;
     grid-template-areas: 
-    "he he he"
-    "vs1 vli va1"
-    "vdi vli vdi"
-    "vba vli va2"
-    "vba vli vdi"
-    "vba vli va3"
-    "vba vli vdi"
-    "vba vli ved"
-    "vfo vli ved"
+    "he he"
+    "vs1 va1"
+    "vba va2"
+    "vba va3"
+    "vba ved"
+    "vfo ved"
     ;
 }
 #vsection_1{
-
+    display: flex;
     background-color: red;
     grid-area: vs1;
+    justify-content: center;
+    align-items: center;
+}
+
+.varticle_style{
+    border-left: 10PX black solid;
+    border-bottom: 1px solid gray;
 }
 
 #varukorg_status{
+
     background-color: #96897B;
-    padding: 5px;
+    padding:5px;
     border-radius: 10px;
+
 }
 
 #basket{
@@ -326,16 +333,19 @@ footer{
 #varticle_1{
     background-color: blue;
     grid-area: va1;
+    
 }
 
 #varticle_2{
     background-color: pink;
     grid-area: va2;
+    
 }
 
 #varticle_3{
     background-color: brown;
     grid-area: va3;
+    
 }
 
 #vfooter{
