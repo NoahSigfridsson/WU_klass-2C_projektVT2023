@@ -27,6 +27,7 @@ header{
     justify-content: space-between;
     align-items: center;
     
+    
 }
 
 h1{
@@ -174,7 +175,7 @@ a{
     margin-bottom: 20px;
 }
 
-footer{
+#index_footer{
     grid-area: fo;
     background-color: #DFD5A5 ;
     display: grid;
@@ -209,26 +210,45 @@ footer{
 /*kod för mat.html*/
 
 #food_wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100vw;
     padding-bottom: 40px;
     background: linear-gradient(#DBAD6A, rgb(163, 98, 28));
 }
 
+.all_food{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .foods{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid black;
+    border-radius: 10px;
+    margin: 20px;
     text-align: center;
     padding-left: 10px;
     padding-right: 10px;
+    padding-bottom: 10px;
     width: 350px;
+
+    
 }
 
 .food_img{
     margin-top: 30px;
     border-radius: 10px;
     border: black dotted 1.5px;
+    margin-bottom: 10px;
 }
 
 #biggermac{
-    width: 350px;
+    width: 300px;
 }
 
 #enchiladas{
@@ -240,7 +260,7 @@ footer{
 }
 
 #friedchicken{
-    width: 350px;
+    width: 300px;
 }
 
 #goulash{
@@ -248,7 +268,15 @@ footer{
 }
 
 #pulledpork{
-    width: 350px;
+    width: 300px;
+}
+
+#tortellini{
+    height: 300px;
+}
+
+#meatstew{
+    height: 300px;
 }
 
 /*Kod för varukorgsicon funktion*/
@@ -260,8 +288,6 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    left: 19%;
     cursor: pointer;
 }
 
@@ -293,16 +319,23 @@ footer{
 #basket_wrapper{
     display: grid;
     height: 100vh;
+    width: 100vw;
     background: linear-gradient(#DBAD6A, rgb(163, 98, 28));
-    grid-template-rows: 80px 80px 100px 200px minmax(80px, 1fr) 80px;
-    grid-template-columns: 1.4fr 1fr;
+    grid-template-rows: 80px 80px minmax(200px, 1fr) 80px 105px 70px  ;
+    grid-template-columns: 50% 50%;
     grid-template-areas: 
     "he he"
     "vs1 va1"
-    "vba va2"
-    "vba va3"
-    "vba ved"
-    "vfo ved";
+    "vba vba"
+    "va2 va2"
+    "va3 va3"
+    "vfo vfo";
+}
+
+.varticle_style{
+    border-left: 10PX black solid;
+    border-bottom: 1px solid black;
+
 }
 
 #vsection_1{
@@ -310,12 +343,6 @@ footer{
     grid-area: vs1;
     justify-content: center;
     align-items: center;
-}
-
-.varticle_style{
-    border-left: 10PX black solid;
-    border-bottom: 1px solid black;
-
 }
 
 #varukorg_status{
@@ -327,16 +354,35 @@ footer{
 }
 
 #basket{
-    background-color: aqua;
     grid-area: vba;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+#varukorg_text{
+    font-size: 4rem;
+    rotate: 30deg;
+}
 #varticle_1{
     grid-area: va1;
     display: flex;
-    flex-direction: row;
-    justify-content:space-around;
+    justify-content: center;
     align-items: center;
+
+}
+
+#rensa_varukorg{
+    background-color: #96897B;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#rensa_varukorg:hover{
+    border: solid black;
+    transition: 0.1s ease-in;
+    background-color: #7c6f62;
     
 }
 
@@ -350,6 +396,9 @@ footer{
 #varticle_2{
     grid-area: va2;
     padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     
 }
 #rabatt_titel{
@@ -369,6 +418,10 @@ footer{
 }
 #kampanjkod_bar{
     width: 210px;
+    height: 25px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1rem;
+    padding-left: 5px;
 }
 
 #kampanjkod_button{
@@ -376,33 +429,94 @@ footer{
     width: 70px;
     border-radius: 10px;
     border: none;
-}
-
-#varticle_3{
-    background-color: brown;
-    grid-area: va3;
+    cursor: pointer;
+    background-color: #96897B;
     
 }
 
-#vfooter{
-    background-color: tomato;
-    grid-area: vfo;
+#kampanjkod_button:hover{
+    border: solid black;
+    transition: 0.1s ease-in;
+    background-color: #7c6f62;
+}
+
+#varticle_3{
+    grid-area: va3;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-bottom: 5px;
+    
+}
+
+.center_leverans{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#leverans_titel{
+    width: 100%;
+}
+
+#leveransalternativ{
+    font-size: 1.7rem;
+}
+
+#frakta{
+    height: 53px;
+    width: 200px;
+    border: 2px solid black;
+    border-radius: 10px;
+
+}
+
+#frakta:hover{
+    transition: 0.1s;
+    border: 3px solid black;
+}
+
+#van_icon{
+    height: 50px;
+    width: auto;
+    margin-right: 5px;
+}
+
+#hamta_upp{
+    height: 53px;
+    width: 200px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+#hamta_upp:hover{
+    transition: 0.1s;
+    border: 3px solid black;
+}
+#warehouse_icon{
+    height: 35px;
+    width: auto;
+    margin-right: 5px;
+
 }
 
 #empty_div{
     background-color: green;
     grid-area: ved;
+    display: none;
 }
 
-#vline{
-    background-color: black;
-    grid-area: vli;
+#vfooter{
+    grid-area: vfo;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    padding: 20px;
+    
 }
 
-#vdivider{
-    background-color: gray;
-    grid-area: vdi;
-}
 
 @media screen and (min-width: 700px) {
 
@@ -504,5 +618,20 @@ footer{
 
     #tortellini{
         height: 350px;
+    }
+
+    #basket_wrapper{
+        display: grid;
+        height: 100vh;
+        background: linear-gradient(#DBAD6A, rgb(163, 98, 28));
+        grid-template-rows: 80px 80px 100px 200px minmax(80px, 1fr) 80px;
+        grid-template-columns: 1.4fr 1fr;
+        grid-template-areas: 
+        "he he"
+        "vs1 va1"
+        "vba va2"
+        "vba va3"
+        "vba ved"
+        "vfo ved";
     }
 }
