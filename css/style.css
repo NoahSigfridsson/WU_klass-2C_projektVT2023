@@ -72,6 +72,7 @@ a{
     justify-content: space-evenly;
     align-items: center;
     transition-duration: 1s;
+    z-index: 2;
 }
 
 #arrow_menu_switch{
@@ -87,6 +88,7 @@ a{
 .link_list_visible{
     transform: translateX(200px);
     transition-duration: 1s;
+    z-index: 2;
 }
 
 .arrow_rotated{
@@ -177,7 +179,7 @@ a{
 
 #index_footer{
     grid-area: fo;
-    background-color: #DFD5A5 ;
+    background-color: #DFD5A5;
     display: grid;
     grid-template-columns: 100vw;
     grid-template-rows: 1fr 5fr;
@@ -321,7 +323,7 @@ a{
     height: 100vh;
     width: 100vw;
     background: linear-gradient(#DBAD6A, rgb(163, 98, 28));
-    grid-template-rows: 80px 80px minmax(200px, 1fr) 80px 105px 70px  ;
+    grid-template-rows: 80px 80px minmax(200px, 1fr) 80px 105px 100px  ;
     grid-template-columns: 50% 50%;
     grid-template-areas: 
     "he he"
@@ -362,7 +364,7 @@ a{
 
 #varukorg_text{
     font-size: 4rem;
-    rotate: 30deg;
+    transform: rotate(30deg);
 }
 #varticle_1{
     grid-area: va1;
@@ -465,10 +467,11 @@ a{
 }
 
 #frakta{
-    height: 53px;
+    height: 55px;
     width: 200px;
     border: 2px solid black;
     border-radius: 10px;
+    cursor: pointer;
 
 }
 
@@ -488,6 +491,7 @@ a{
     width: 200px;
     border: 2px solid black;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 #hamta_upp:hover{
@@ -501,12 +505,6 @@ a{
 
 }
 
-#empty_div{
-    background-color: green;
-    grid-area: ved;
-    display: none;
-}
-
 #vfooter{
     grid-area: vfo;
     display: flex;
@@ -516,6 +514,83 @@ a{
     padding: 20px;
     
 }
+
+#empty_div{
+    grid-area: ved;
+    border-left: 10px solid black;
+}
+
+/*Kod för ravaror.html*/
+
+#ravaror_wrapper{
+    background: linear-gradient(#DBAD6A, rgb(163, 98, 28));
+    display: grid;
+    grid-template-rows: 80px 60px 400px 400px 130px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "he he"
+    "rs1 rs1"
+    "ra1 ra2"
+    "ra3 ra4"
+    "rfo rfo"
+    ;
+}
+
+.ravaror_articles{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid black;
+    margin: 5px;
+    background-color: #96897B;
+}
+
+.ravaror_images{
+    width: 300px;
+    border-radius: 5px;
+}
+
+#rsection_1{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    grid-area: rs1;
+}
+
+#ravaror_title{
+    font-size: 3rem;
+}
+
+#rarticle_1{
+    grid-area: ra1;
+
+}
+
+#rarticle_2{
+    grid-area: ra2;
+}
+
+#rarticle_3{
+    grid-area: ra3;
+
+}
+
+#rarticle_4{
+    grid-area: ra4;
+
+}
+
+#ravaror_footer{
+    grid-area: rfo;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #DFD5A5;
+    padding: 10px;
+}
+
 
 
 @media screen and (min-width: 700px) {
@@ -577,7 +652,6 @@ a{
         margin-bottom: 20px;
     }
 
-
     header{
     
         grid-area: he;
@@ -586,11 +660,13 @@ a{
         justify-content: space-between;
         align-items: center;
     }
+    
     #food_wrapper{
         display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
+        padding:0 50px 0 50px;
         justify-content: center;
-        align-items: end;
     }
 
     .foods{
@@ -624,14 +700,48 @@ a{
         display: grid;
         height: 100vh;
         background: linear-gradient(#DBAD6A, rgb(163, 98, 28));
-        grid-template-rows: 80px 80px 100px 200px minmax(80px, 1fr) 80px;
+        grid-template-rows: 80px 100px 100px 200px minmax(80px, 1fr) 80px;
         grid-template-columns: 1.4fr 1fr;
         grid-template-areas: 
         "he he"
-        "vs1 va1"
+        "vs1 vfo"
         "vba va2"
         "vba va3"
         "vba ved"
-        "vfo ved";
+        "va1 ved";
     }
+
+    #empty_div{
+
+        grid-area: ved;
+
+    }
+
+    #frakta{
+        height: 56px;
+
+    
+    }
+
+    #ravaror_wrapper{
+        height: 100vh;
+        background: linear-gradient(#DBAD6A, rgb(163, 98, 28));
+        display: grid;
+        grid-template-rows: 80px 60px minmax(400px, 1fr) 120px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "he he he he"
+        "rs1 rs1 rs1 rs1"
+        "ra1 ra2 ra3 ra4"
+        "rfo rfo rfo rfo"
+        ;
+   }
+
+   .ravaror_articles{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 150px 10px 150px 10px;
+    
+   }
 }
