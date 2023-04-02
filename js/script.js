@@ -4,8 +4,6 @@ const cartButtonsArray = document.getElementsByClassName('lagg_i_korg')
 const cartIndicator = document.getElementById('indicator_circle')
 var numOfItemsInCart = 0
 var i = 0
-var j = 0
-
 
 function toggleMenu() {
 
@@ -15,7 +13,6 @@ function toggleMenu() {
 }
 arrow.addEventListener('click', toggleMenu)
 
-
 function addItemToCart() {
     numOfItemsInCart = numOfItemsInCart + 1;
     document.getElementById('indicator_text').innerHTML = numOfItemsInCart
@@ -23,7 +20,6 @@ function addItemToCart() {
 
 function indicatorOn() {
     cartIndicator.classList.remove('toggle_indicator')
-    console.log(cartIndicator)
 }
 
 while(i < cartButtonsArray.length){
